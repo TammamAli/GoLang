@@ -47,7 +47,7 @@ func countries() []string {
 	return countriesCpy
 }
 
-func main() {
+func Start() {
 	/*
 		array declaration
 	*/
@@ -267,5 +267,12 @@ func main() {
 	fmt.Println("\nMemory optimization using copy")
 	countriesNeeded := countries()
 	fmt.Println(countriesNeeded)
+
+	changeLocal([5]int{})
+
+	subtactOne([]int{})
+
+	printarray([3][2]string{})
+	countries()
 
 }
