@@ -1,9 +1,0 @@
-Package List
-
-fmt
-reflect
-math
-time
-unsafe
-strconv
-math/rand"
