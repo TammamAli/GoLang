@@ -1,0 +1,47 @@
+whether
+whichever 
+whenever
+wherever
+assignment
+variant
+In the above snippe
+Gotcha
+gotchas
+This syntax often comes in handy
+Therefore 
+syntactical 
+idiomatic
+We have seen various if-else constructs
+philosophy
+indentation
+immediately
+Please keep this in mind whenever writing Go programs.
+satisfied
+abruptly :quickly and without warning
+intended 
+This is not the intended output.
+rescue
+omitted
+ a program is worth a hundred words. 
+
+ fingers
+The first digit is the thumb, followed by the index finger, middle finger, ring finger, and little finger or pinkie
+
+Fallthrough
+
+concise 
+wrapper 
+underlying 
+variadic 
+One question might be bothering you though.
+Pretty cool  
+tautological 
+... ellipsis operator
+Inference 
+can be thought of as  
+Henceforth 
+As long as
+
+
+https://www.scribbr.com/parts-of-speech/conjunctions/
+https://dictionary.cambridge.org/grammar/british-grammar/conjunctions
