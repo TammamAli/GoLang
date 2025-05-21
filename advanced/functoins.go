@@ -52,3 +52,15 @@ func rectProps2(length, width float32) (area, perimeter float32) {
 	perimeter = (length + width) * 2
 	return
 }
+
+func VariadicFunction() {
+	/*
+		What is a variadic function?
+			Functions in general accept only a fixed number of arguments.
+			A variadic function is a function that accepts a variable number of arguments.
+			If the last parameter of a function definition is prefixed by ellipsis …, then
+			the function can accept any number of arguments for that parameter.
+			Only the last parameter of a function can be variadic. We will learn why this is the case in the next section of this tutorial.
+	*/
+
+}
