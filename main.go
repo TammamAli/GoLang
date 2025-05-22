@@ -1,7 +1,7 @@
 package main
 
 import (
-	"goHelper/data_structure"
+	"goHelper/advanced"
 	"goHelper/simpleinterest"
 	"log"
 )
@@ -38,7 +38,9 @@ func main() {
 	//basics.Switch()
 
 	// data_structure.ArraysSlices1()
-	data_structure.ArraysSlices2()
+	// data_structure.ArraysSlices2()
+
+	advanced.VariadicFunction()
 }
 
 func init() {
