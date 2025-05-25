@@ -40,7 +40,10 @@ func main() {
 	// data_structure.ArraysSlices1()
 	// data_structure.ArraysSlices2()
 
-	advanced.VariadicFunction()
+	// advanced.VariadicFunction()
+
+	// advanced.Maps()
+	advanced.Strings()
 }
 
 func init() {

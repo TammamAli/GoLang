@@ -1,0 +1,7 @@
+package advanced
+
+func Pointers() {
+
+	/*
+	 */
+}

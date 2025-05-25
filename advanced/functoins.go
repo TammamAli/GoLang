@@ -85,7 +85,8 @@ func VariadicFunction() {
 			passed to the function without a new slice being created.
 
 			Gotcha : Just be sure you know what you are doing when you are modifying a slice inside a variadic function.
-			if ... is used, the welcome slice itself will be passed as an argument without a new slice being created. Hence welcome will be passed to the change function as argument.
+			if ... is used, the welcome slice itself will be passed as an argument without a new slice being created.
+			Hence welcome will be passed to the change function as argument.
 
 
 
