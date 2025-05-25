@@ -43,7 +43,9 @@ func main() {
 	// advanced.VariadicFunction()
 
 	// advanced.Maps()
-	advanced.Strings()
+	// advanced.Strings()
+
+	advanced.Pointers()
 }
 
 func init() {
