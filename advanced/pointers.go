@@ -70,7 +70,7 @@ func Pointers() {
 	fmt.Println(ptr_str1)
 
 	var ptr_int *int // zero value pointer
-	if ptr_int != nil {
+	if ptr_int == nil {
 		fmt.Println(ptr_int)
 	} else {
 		ptr_int = a

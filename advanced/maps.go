@@ -172,7 +172,7 @@ func Maps() {
 	fmt.Println(salaries)
 
 	var mapTest map[string]int
-	if mapTest == nil {
+	if mapTest != nil {
 		mapTest = make(map[string]int)
 		fmt.Println("equal zeor")
 	}

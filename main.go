@@ -45,7 +45,9 @@ func main() {
 	// advanced.Maps()
 	// advanced.Strings()
 
-	advanced.Pointers()
+	// advanced.Pointers()
+
+	advanced.Structs()
 }
 
 func init() {
