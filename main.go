@@ -47,7 +47,8 @@ func main() {
 
 	// advanced.Pointers()
 
-	advanced.Structs()
+	// advanced.Structs()
+	advanced.Methods()
 }
 
 func init() {

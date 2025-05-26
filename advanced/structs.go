@@ -164,7 +164,6 @@ func compareStruct() {
 
 	fmt.Println(img1)
 	fmt.Println(img2)
-
 	//invalid operation: image1 == image2 (struct containing map[int]int cannot be compared)
 	/*if img1 == img2 {
 		fmt.Println("name1 and name2 are equal")
@@ -172,7 +171,6 @@ func compareStruct() {
 		fmt.Println("name1 and name2 are not equal")
 	}
 	*/
-
 }
 
 func PersonStruct() {
