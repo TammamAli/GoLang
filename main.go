@@ -1,7 +1,7 @@
 package main
 
 import (
-	"goHelper/advanced"
+	"goHelper/interfaces"
 	"goHelper/simpleinterest"
 	"log"
 )
@@ -48,7 +48,14 @@ func main() {
 	// advanced.Pointers()
 
 	// advanced.Structs()
-	advanced.Methods()
+	// advanced.Methods()
+	// advanced.Interfaces()
+
+	// advanced.Explain()
+
+	interfaces.StartInterface()
+	interfaces.MulitIntrface()
+
 }
 
 func init() {
