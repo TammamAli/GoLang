@@ -1,7 +1,7 @@
 package main
 
 import (
-	"goHelper/interfaces"
+	"goHelper/concurrency"
 	"goHelper/simpleinterest"
 	"log"
 )
@@ -53,8 +53,9 @@ func main() {
 
 	// advanced.Explain()
 
-	interfaces.StartInterface()
-	interfaces.MulitIntrface()
+	// interfaces.StartInterface()
+	// interfaces.MulitIntrface()
+	concurrency.Concurrency()
 
 }
 
