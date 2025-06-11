@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"goHelper/concurrency"
 	"goHelper/simpleinterest"
 	"log"
+	"os"
+	"time"
 )
 
 var p, r, t = 5000.0, 10.0, 1.0
@@ -11,6 +14,10 @@ var p, r, t = 5000.0, 10.0, 1.0
 var _ = simpleinterest.Calculate
 
 func main() {
+
+	// the first argument is always program name
+	programName := os.Args[0]
+	fmt.Println(programName)
 
 	//fmt.Println("First app.")
 
@@ -55,8 +62,124 @@ func main() {
 
 	// interfaces.StartInterface()
 	// interfaces.MulitIntrface()
-	concurrency.Concurrency()
+	//concurrency.Concurrency()
 
+	// //concurrency.Concurrency()
+	// go concurrency.Hello()
+	// time.Sleep(1 * time.Second)
+	// fmt.Println("main function")
+
+	// go concurrency.Numbers()
+	// go concurrency.Alphabets()
+	// time.Sleep(3000 * time.Millisecond)
+	// fmt.Println("main terminated")
+
+	// concurrency.Channels()
+	fmt.Printf("\n")
+
+	// concurrency.CallChannelS1()
+	//	concurrency.CallChannelS2()
+
+	//This program will print the sum of the squares and cubes of the individual digits of a number.
+
+	number := 589
+	// fmt.Printf("%v\n", concurrency.CalcSquares(number))
+	// fmt.Printf("%v\n", concurrency.CalCubes(number))
+
+	sqrch := make(chan int)
+	cubech := make(chan int)
+	go concurrency.Chan_CalcSquares(number, sqrch)
+	go concurrency.Chan_CalCubes(number, cubech)
+	squares, cubes := <-sqrch, <-cubech
+	fmt.Println("Final output", squares+cubes)
+
+	// ch := make(chan int)
+	// ch <- 6
+
+	concurrency.CallSendOnlyChan()
+
+	//chanelExample()
+
+	for i := range 10 {
+		fmt.Printf("%v ", i)
+	}
+
+	fmt.Printf("\n\n")
+
+	// concurrency.Receiver()
+	concurrency.ReceiverForRange()
+
+	//number := 589
+	concurrency.TestCall(589)
+
+	fmt.Printf("\n\n")
+
+	concurrency.BufferedChannels()
+
+	concurrency.ClosedChan()
+	concurrency.ChanCapLen()
+
+}
+
+func Chnl(ch chan int) {
+	ch <- 1
+}
+
+// producer creates and sends values to the channel
+func producer(ch chan<- int) {
+	for i := 0; i < 5; i++ {
+		ch <- i
+		time.Sleep(time.Second)
+	}
+	close(ch) // Close the channel when done sending
+}
+
+// consumer receives values from a receive-only channel
+func consumer(ch <-chan int) {
+	for {
+		val, ok := <-ch
+		if !ok {
+			fmt.Println("Channel closed!")
+			return
+		}
+		fmt.Println("Received:", val)
+	}
+}
+
+func chanelExample() {
+	ch := make(chan int)
+
+	// Start producer (send-only)
+	go producer(ch)
+
+	// Start consumer (receive-only)
+	go consumer(ch)
+
+	// Wait for goroutines to finish
+	time.Sleep(6 * time.Second)
+	fmt.Println("Done!")
+}
+
+func DateTimeLayout() {
+	currentTime := time.Now()
+	fmt.Println("Current Time in String: ", currentTime.String())
+	fmt.Println("MM-DD-YYYY : ", currentTime.Format("01-02-2006"))
+	fmt.Println("YYYY-MM-DD : ", currentTime.Format("2006-01-02"))
+	fmt.Println("YYYY.MM.DD : ", currentTime.Format("2006.01.02 15:04:05"))
+	fmt.Println("YYYY#MM#DD {Special Character} : ", currentTime.Format("2006#01#02"))
+	fmt.Println("YYYY-MM-DD hh:mm:ss : ", currentTime.Format("2006-01-02 15:04:05"))
+	fmt.Println("Time with MicroSeconds: ", currentTime.Format("2006-01-02 15:04:05.000000"))
+	fmt.Println("Time with NanoSeconds: ", currentTime.Format("2006-01-02 15:04:05.000000000"))
+	fmt.Println("ShortNum Month : ", currentTime.Format("2006-1-02"))
+	fmt.Println("LongMonth : ", currentTime.Format("2006-January-02"))
+	fmt.Println("ShortMonth : ", currentTime.Format("2006-Jan-02"))
+	fmt.Println("ShortYear : ", currentTime.Format("06-Jan-02"))
+	fmt.Println("LongWeekDay : ", currentTime.Format("2006-01-02 15:04:05 Monday"))
+	fmt.Println("ShortWeek Day : ", currentTime.Format("2006-01-02 Mon"))
+	fmt.Println("ShortDay : ", currentTime.Format("Mon 2006-01-2"))
+	fmt.Println("Short Hour Minute Second: ", currentTime.Format("2006-01-02 3:4:5"))
+	fmt.Println("Short Hour Minute Second: ", currentTime.Format("2006-01-02 3:4:5 PM"))
+	fmt.Println("Short Hour Minute Second: ", currentTime.Format("2006-01-02 3:4:5 pm"))
 }
 
 func init() {
